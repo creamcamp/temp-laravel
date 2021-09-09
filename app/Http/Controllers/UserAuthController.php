@@ -27,12 +27,14 @@ class UserAuthController extends Controller
             return response()->json([
                 'status'=> 200,
                 'email'=> $authData['email'],
+                'uID'=> $userId['id'],
                 'success'=> true,
-                'uID'=> $userId['id']
             ]);
         } else {
             return response()->json([
                 'status'=> 404,
+                'email'=> null,
+                'uID'=> null,
                 'success'=> false,
                 'error'=> '404 User not found!',
                 'message'=> 'Unable to find this user!'
