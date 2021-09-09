@@ -1,0 +1,40 @@
+GET http://127.0.0.1:8000/api/actions HTTP/1.1
+
+###
+
+GET http://127.0.0.1:8000/api/actions/1 HTTP/1.1
+
+###
+
+POST http://127.0.0.1:8000/api/actions HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "My new title 2",
+    "content": "Some content 2!!",
+    "user_id": "1"
+}
+
+###
+
+PUT http://127.0.0.1:8000/api/actions/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "My SUPER new title",
+    "content": "Some content updated!!"
+}
+
+###
+
+DELETE http://127.0.0.1:8000/api/actions/
+
+###
+
+POST http://127.0.0.1:8000/api/auth/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "upVz6jJkrk@gmail.com",
+    "password": "password"
+}
